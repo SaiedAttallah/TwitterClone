@@ -3,12 +3,11 @@
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
-    <string name="action_sign_in">Sign in with Twitter</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
+    <string name="sign_in_with_twitter">Sign in with Twitter</string>
+    <string name="cancel">Cancel</string>
+    <string name="retry">Retry</string>
     <string name="consumer_key">VfSobidUqadeRAz49OTHiA0m8</string>
     <string name="consumer_secret">	OLXvmWBUsA4QcxDo1x72XeZAVIx5qA2znVopX2p2AoEgv7xiVO</string>
+    <string name="network_connection_error_title">Network Connection Error</string>
+    <string name="network_connection_error_message">Please check your network Connection!</string>
 </resources>

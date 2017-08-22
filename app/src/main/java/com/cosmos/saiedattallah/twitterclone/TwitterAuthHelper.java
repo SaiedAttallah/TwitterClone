@@ -13,13 +13,13 @@ import twitter4j.auth.RequestToken;
  * Created by SaiedAttallah on 8/21/2017.
  */
 
-public class TwitterBackend {
+public class TwitterAuthHelper {
     private static Twitter twitter;
     private static final String CALLBACK_URL = "http://oauth.gmodules.com/gadgets/oauthcallback";
     private AccessToken accessToken;
     private RequestToken requestToken;
 
-    public TwitterBackend(String consumerKey, String consumerSecret) {
+    public TwitterAuthHelper(String consumerKey, String consumerSecret) {
         twitter = new TwitterFactory().getInstance();
         twitter.setOAuthConsumer(consumerKey, consumerSecret);
     }

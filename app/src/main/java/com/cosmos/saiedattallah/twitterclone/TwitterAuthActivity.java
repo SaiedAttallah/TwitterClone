@@ -7,7 +7,7 @@ import android.view.KeyEvent;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class TwitterAuthentication extends AppCompatActivity {
+public class TwitterAuthActivity extends AppCompatActivity {
 
     private WebView webView;
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_in_with_twitter">تسجيل دخول من خلال تويتر</string>
+    <string name="cancel">إلغاء</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="network_connection_error_title">خطأ أثناء الاتصال بالشبكة</string>
+    <string name="network_connection_error_message">برجاء التأكد من الاتصال بالشبكة!</string>
+</resources>
