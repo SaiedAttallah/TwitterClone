@@ -22,7 +22,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private SharedPreferences prefs;
     private AccessToken accessToken;
     private Button btnLogin;
-    private ProgressDialog progressDialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

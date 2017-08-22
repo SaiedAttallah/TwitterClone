@@ -10,4 +10,9 @@
     <string name="consumer_secret">	OLXvmWBUsA4QcxDo1x72XeZAVIx5qA2znVopX2p2AoEgv7xiVO</string>
     <string name="network_connection_error_title">Network Connection Error</string>
     <string name="network_connection_error_message">Please check your network Connection!</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home" />
+    <string name="followers" />
 </resources>
