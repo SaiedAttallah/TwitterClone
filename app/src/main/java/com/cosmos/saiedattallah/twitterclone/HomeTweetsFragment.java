@@ -3,15 +3,19 @@ package com.cosmos.saiedattallah.twitterclone;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.support.v4.app.ListFragment;
+
+import twitter4j.Paging;
+import twitter4j.Twitter;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeTweetsFragment extends Fragment {
+public abstract class HomeTweetsFragment extends ListFragment {
+
+    protected Twitter twitter;
+    protected Paging paging;
 
 
     public HomeTweetsFragment() {
@@ -20,10 +24,22 @@ public class HomeTweetsFragment extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_tweets, container, false);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        initializeAuthHelper();
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        refresh();
+    }
+
+    private void initializeAuthHelper() {
+        twitter = TwitterAuthHelper.getTwitterInstance();
+        paging = new Paging(1, 20);
+    }
+
+    public abstract void refresh();
 
 }

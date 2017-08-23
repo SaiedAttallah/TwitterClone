@@ -5,6 +5,6 @@
     <string name="retry">إعادة المحاولة</string>
     <string name="network_connection_error_title">خطأ أثناء الاتصال بالشبكة</string>
     <string name="network_connection_error_message">برجاء التأكد من الاتصال بالشبكة!</string>
-    <string name="home" />
-    <string name="followers" />
+    <string name="home">الرئيسية</string>
+    <string name="followers">المتابعون</string>
 </resources>

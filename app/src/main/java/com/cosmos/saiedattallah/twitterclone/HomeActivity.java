@@ -1,14 +1,11 @@
 package com.cosmos.saiedattallah.twitterclone;
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 
 public class HomeActivity extends AppCompatActivity implements ActionBar.TabListener {
     private ActionBar actionbar;
@@ -32,18 +29,18 @@ public class HomeActivity extends AppCompatActivity implements ActionBar.TabList
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
         if (fragment == null) {
-            fragment = Fragment.instantiate(this, HomeTweetsFragment.class.getName());
+            fragment = Fragment.instantiate(this, TimelineTweets.class.getName());
             fragmentTag = "home";
-            ft.add(R.id.fg_home_tweets, fragment, fragmentTag);
+            ft.add(R.id.home_activity_layout, fragment, fragmentTag);
         } else {
             if (tab.getPosition() == 0) {
                 fragment = Fragment.instantiate(this,
-                        HomeTweetsFragment.class.getName());
+                        TimelineTweets.class.getName());
             } else {
                 fragment = Fragment.instantiate(this, FollowersFragment.class.getName());
                 fragmentTag = "user";
             }
-            ft.replace(R.id.fg_home_tweets, fragment, fragmentTag);
+            ft.replace(R.id.home_activity_layout, fragment, fragmentTag);
 
         }
     }
@@ -63,8 +60,8 @@ public class HomeActivity extends AppCompatActivity implements ActionBar.TabList
     public void initActionBar() {
         actionbar = getSupportActionBar();
         actionbar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setDisplayShowTitleEnabled(false);
+        actionbar.setDisplayHomeAsUpEnabled(false);
+        actionbar.setDisplayShowTitleEnabled(true);
         addTabs();
     }
 
