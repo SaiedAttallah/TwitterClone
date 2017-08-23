@@ -27,7 +27,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".TwitterAuthActivity" />
-        <activity android:name=".TweetActivity"></activity>
+        <activity android:name=".TweetActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>
