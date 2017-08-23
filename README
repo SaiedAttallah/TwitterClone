@@ -1,0 +1,6 @@
+Twitter Clone
+Android Twitter clone project.
+
+I'm using Twitter4J library which is Java library for the Twitter API.
+User can login with twitter account and will get timeline tweets and show it in Home screen.
+I'm still working on the Followers list and facing some issues with Twitter API regards limitation and response structure.
