@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cosmos.saiedattallah.twitterclone.fragments.ComposeDialogFragment"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibtnCancel"
+        android:src="@drawable/ic_close_black_24dp"
+        android:onClick="closeDialog"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/etPeepBody"
+        tools:text="You think water moves fast? You should see ice. It moves like it has a mind."
+        android:hint="@string/hint"
+        android:gravity="top"
+        android:maxLength="140"
+        android:layout_below="@+id/ibtnCancel"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            tools:text="139"
+            android:id="@+id/tvLetterCount"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical|right"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tweet"
+            android:id="@+id/btnPeep"
+            android:onClick="savePeep"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+
+</LinearLayout>

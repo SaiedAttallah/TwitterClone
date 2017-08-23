@@ -12,4 +12,8 @@
     <string name="network_connection_error_message">Please check your network Connection!</string>
     <string name="home">Home</string>
     <string name="followers">Followers</string>
+    <string name="hint">What\'s going on?</string>
+    <string name="tweet">Tweet</string>
+    <string name="back">Back</string>
+    <string name="profile">Profile</string>
 </resources>

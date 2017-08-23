@@ -1,7 +1,9 @@
-package com.cosmos.saiedattallah.twitterclone;
+package com.cosmos.saiedattallah.twitterclone.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.cosmos.saiedattallah.twitterclone.R;
 
 public class ProfileActivity extends AppCompatActivity {
 

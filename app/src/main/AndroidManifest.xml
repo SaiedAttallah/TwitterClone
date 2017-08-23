@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -12,23 +13,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="TweetClient.db"/>
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="3"/>
+        <meta-data
+            android:name="AA_MODELS"
+            android:value="com.getlosthere.apps.peep.models.Tweet,com.getlosthere.apps.peep.models.User"/>
+
+        <activity android:name=".activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="glhpeep"
+                    android:scheme="oauth"/>
+            </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity">
+        <activity android:name=".activities.HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".TwitterAuthActivity" />
-        <activity android:name=".TweetActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".activities.TweetActivity" />
+        <activity android:name=".activities.ProfileActivity"></activity>
     </application>
 
 </manifest>
