@@ -18,10 +18,10 @@
             android:value="TweetClient.db"/>
         <meta-data
             android:name="AA_DB_VERSION"
-            android:value="3"/>
+            android:value="1"/>
         <meta-data
             android:name="AA_MODELS"
-            android:value="com.getlosthere.apps.peep.models.Tweet,com.getlosthere.apps.peep.models.User"/>
+            android:value="com.cosmos.saiedattallah.twitterclone.models.Tweet, com.cosmos.saiedattallah.twitterclone.models.User"/>
 
         <activity android:name=".activities.LoginActivity">
             <intent-filter>

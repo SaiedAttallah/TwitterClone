@@ -23,20 +23,19 @@ import cz.msebera.android.httpclient.Header;
  * A simple {@link Fragment} subclass.
  */
 public class TimelineTweetsFragment extends TweetsListFragment {
-    private TwitterClientProvider client;
+    private TwitterClientProvider twitterClientProvider;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        client = App.getRestClient();
-//        pb.setVisibility(ProgressBar.VISIBLE);
+        twitterClientProvider = App.getRestClient();
+
         populateTimeline(1);
-//        pb.setVisibility(ProgressBar.INVISIBLE);
     }
 
     public void populateTimeline(long maxId) {
         if (NetworkHelper.isOnline() && NetworkHelper.isNetworkAvailable(getActivity())) {
-            client.getHomeTimeline(maxId, new JsonHttpResponseHandler() {
+            twitterClientProvider.getHomeTimeline(maxId, new JsonHttpResponseHandler() {
                 @Override
                 public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
                     ArrayList<Tweet> newTweets = Tweet.fromJSONArray(response);

@@ -19,7 +19,7 @@ public class TwitterClientProvider extends OAuthBaseClient {
     public static final Class<? extends Api> REST_API_CLASS = TwitterApi.class;
     public static final String REST_URL = "https://api.twitter.com/1.1";
     public static final String REST_CONSUMER_KEY = "VfSobidUqadeRAz49OTHiA0m8";
-    public static final String REST_CONSUMER_SECRET = "OLXvmWBUsA4QcxDo1x72XeZAVIx5qA2znVopX2p2AoEgv7xiVO"; // Change this
+    public static final String REST_CONSUMER_SECRET = "OLXvmWBUsA4QcxDo1x72XeZAVIx5qA2znVopX2p2AoEgv7xiVO";
     public static final String REST_CALLBACK_URL = "oauth://glhpeep";
 
     public TwitterClientProvider(Context context) {
